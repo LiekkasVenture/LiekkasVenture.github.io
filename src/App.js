@@ -16,6 +16,30 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Liekkas Venture</h2>
         </div>
+		<div className="Episode">
+			<ul>
+				<li>
+					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/08-Music.md">
+						Liekkas Venture 8: Music
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/07-Chinese-Internet-Company.md">
+						Liekkas Venture 7: Chinese Internet Company
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/06-Olympics.md">
+						Liekkas Venture 6: Olympics
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/LiekkasVenture/LiekkasVenture/">
+						More
+					</a>
+				</li>
+			</ul>
+		</div>
 		<div className="Words">
 			<ReactMarkdown source={SammyWord} />
 			<ReactMarkdown source={BaturWord} />
