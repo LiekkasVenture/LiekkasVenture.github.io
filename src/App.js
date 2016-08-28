@@ -20,17 +20,17 @@ class App extends Component {
 			<ul>
 				<li>
 					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/08-Music.md">
-						Liekkas Venture 8: Music
+						08: Music
 					</a>
 				</li>
 				<li>
 					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/07-Chinese-Internet-Company.md">
-						Liekkas Venture 7: Chinese Internet Company
+						07: Chinese Internet Company
 					</a>
 				</li>
 				<li>
 					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/06-Olympics.md">
-						Liekkas Venture 6: Olympics
+						06: Olympics
 					</a>
 				</li>
 				<li>
