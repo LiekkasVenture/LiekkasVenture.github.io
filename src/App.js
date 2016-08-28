@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import logo from './logo.jpg';
 import './App.css';
-var ReactMarkdown = require('react-markdown');
+import {episodes, words} from './data.js'
 
-var SammyWord = '## Sammy\n```\nLiekkas，一首来自北欧萨米族的歌曲，\n寓意北极光的征兆。\n在忙碌的深圳，\n 感动于它传递的暖意。\n我们以Liekkas Venture命名英语角，\n 延续这份暖意。\n在这小小的角落寄托了我们美好的期许。\n希望未来有一天，我们来一场北极光的冒险之旅！\n```';
+const Word = (props) => (
+	<div>
+		<h2>{props.children[0].name}</h2>
+		<blockquote>{props.children[0].text}</blockquote>
+		<h2>{props.children[1].name}</h2>
+		<blockquote>{props.children[1].text}</blockquote>
+	</div>
+);
 
-var BaturWord = '## Batur \n```这是一个实验，\n两个有趣的人尝试聚集更多有趣的人，\n一起做一些天马行空的事。\n梦幻的北极光那么遥远，\n这两个蜗牛开始了漫漫征途。\n加入我们吧!\n```';
+const Episode = (props) => (
+	<ul>
+		<li><a href="{props.epi[0].link}">{props.epi[0].text}</a></li>
+		<li><a href="{props.epi[1].link}">{props.epi[1].text}</a></li>
+		<li><a href="{props.epi[2].link}">{props.epi[2].text}</a></li>
+		<li><a href="{props.epi[3].link}">{props.epi[3].text}</a></li>
+	</ul>
+);
 
 
 class App extends Component {
@@ -17,32 +31,10 @@ class App extends Component {
           <h2>Welcome to Liekkas Venture</h2>
         </div>
 		<div className="Episode">
-			<ul>
-				<li>
-					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/08-Music.md">
-						08: Music
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/07-Chinese-Internet-Company.md">
-						07: Chinese Internet Company
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/LiekkasVenture/LiekkasVenture/blob/master/06-Olympics.md">
-						06: Olympics
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/LiekkasVenture/LiekkasVenture/">
-						More
-					</a>
-				</li>
-			</ul>
+			<Episode epi={episodes} />
 		</div>
 		<div className="Words">
-			<ReactMarkdown source={SammyWord} />
-			<ReactMarkdown source={BaturWord} />
+			<Word>{words}</Word>
 		</div>
       </div>
     );
